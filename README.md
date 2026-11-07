@@ -6,9 +6,10 @@ behave the same on self-hosted runners (Actions Runner Controller, `mm503/contai
 `arc-runners/*`) and on GitHub-hosted ones.
 
 Adds: `gh`, `docker compose`, `zstd`, `build-essential`, `xz-utils`, `zip`, `rsync`, `wget`,
-`openssh-client`. The base already has git, jq, curl, unzip, python3, Docker CLI + buildx and
-passwordless sudo. Language toolchains (Node, Go, Python versions, …) still come from the
-`setup-*` actions, as on hosted runners.
+`openssh-client`, and a system Node.js 22 (the major hosted ubuntu-24.04 ships; some actions,
+like `pnpm/action-setup`, need a `node` before `setup-node` runs). The base already has git,
+jq, curl, unzip, python3, Docker CLI + buildx and passwordless sudo. Specific toolchain
+versions (Node, Go, Python, …) still come from the `setup-*` actions, as on hosted runners.
 
 ## Image
 

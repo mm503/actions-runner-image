@@ -70,6 +70,10 @@ jobs:
             zstd --version
             make --version
             gcc --version
+            node --version
+            npm --version
+            # what pnpm/action-setup does before setup-node
+            cd "$(mktemp -d)" && npm install --no-save --silent pnpm && npx pnpm --version
             for t in curl wget unzip zip xz rsync ssh python3; do command -v "$t"; done
           '
 
