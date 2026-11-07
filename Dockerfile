@@ -20,6 +20,17 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential \
+        # Hosted's font set: without DejaVu, fontconfig resolves sans-serif/monospace to
+        # whatever's left (e.g. a CJK font from playwright install-deps), and screenshot
+        # tests drift from snapshots taken on hosted runners
+        fontconfig \
+        fonts-dejavu \
+        fonts-dejavu-core \
+        fonts-dejavu-extra \
+        fonts-dejavu-mono \
+        fonts-lato \
+        fonts-noto-color-emoji \
+        fonts-ubuntu-console \
         gh \
         openssh-client \
         rsync \

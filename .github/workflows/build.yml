@@ -75,6 +75,10 @@ jobs:
             # what pnpm/action-setup does before setup-node
             cd "$(mktemp -d)" && npm install --no-save --silent pnpm && npx pnpm --version
             for t in curl wget unzip zip xz rsync ssh python3; do command -v "$t"; done
+            # Same font resolution as hosted ubuntu-24.04
+            test "$(fc-match -f "%{family}" sans-serif)" = "DejaVu Sans"
+            test "$(fc-match -f "%{family}" monospace)" = "DejaVu Sans Mono"
+            test "$(fc-match -f "%{family}" emoji)" = "Noto Color Emoji"
           '
 
       - uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4

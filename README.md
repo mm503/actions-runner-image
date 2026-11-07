@@ -7,7 +7,9 @@ behave the same on self-hosted runners (Actions Runner Controller, `mm503/contai
 
 Adds: `gh`, `docker compose`, `zstd`, `build-essential`, `xz-utils`, `zip`, `rsync`, `wget`,
 `openssh-client`, and a system Node.js 22 (the major hosted ubuntu-24.04 ships; some actions,
-like `pnpm/action-setup`, need a `node` before `setup-node` runs). The base already has git,
+like `pnpm/action-setup`, need a `node` before `setup-node` runs), and hosted's font set
+(DejaVu, Lato, Ubuntu console, Noto Color Emoji), so `sans-serif`/`monospace` resolve the
+same way and screenshot tests match snapshots taken on hosted runners. The base already has git,
 jq, curl, unzip, python3, Docker CLI + buildx and passwordless sudo. Specific toolchain
 versions (Node, Go, Python, …) still come from the `setup-*` actions, as on hosted runners.
 
