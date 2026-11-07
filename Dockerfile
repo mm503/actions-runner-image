@@ -8,7 +8,7 @@ ARG COMPOSE_VERSION=v5.7.0
 # System Node, the major hosted ubuntu-24.04 ships. Some actions need a node on PATH
 # before setup-node runs (e.g. pnpm/action-setup's self-installer).
 # renovate: datasource=node-version depName=node
-ARG NODE_VERSION=22.23.4
+ARG NODE_VERSION=26.13.0
 
 USER root
 
