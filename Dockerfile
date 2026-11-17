@@ -4,7 +4,7 @@
 FROM ghcr.io/actions/actions-runner:2.338.2
 
 # renovate: datasource=github-releases depName=docker/compose
-ARG COMPOSE_VERSION=v5.7.1
+ARG COMPOSE_VERSION=v5.7.2
 # System Node, the major hosted ubuntu-24.04 ships. Some actions need a node on PATH
 # before setup-node runs (e.g. pnpm/action-setup's self-installer).
 # renovate: datasource=node-version depName=node
